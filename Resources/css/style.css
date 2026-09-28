@@ -52,7 +52,8 @@ header .welcome {
     bottom: 9%;
     z-index: 5;
 }
-header .welcome h1 {
+header .welcome h1,
+header .welcome h2 {
     font-size: var(--fs-2xl);
     font-weight: var(--fw-bold);
     margin-bottom: var(--space-3);
@@ -94,7 +95,8 @@ header .welcome .w-btn {
     text-align: center;
     margin-bottom: var(--space-7);
 }
-.section-sub1 h1 { font-size: var(--fs-xl); margin-bottom: var(--space-3); }
+.section-sub1 h1,
+.section-sub1 h2 { font-size: var(--fs-xl); margin-bottom: var(--space-3); }
 .section-sub1 p { color: var(--color-ink-700); font-size: var(--fs-base); }
 
 .submenu-cont {
@@ -144,7 +146,8 @@ header .welcome .w-btn {
     gap: var(--space-8);
 }
 .royal .ry { flex: 3; }
-.royal .ry h1 { font-size: var(--fs-xl); color: var(--color-copper-700); margin-bottom: var(--space-4); }
+.royal .ry h1,
+.royal .ry h2 { font-size: var(--fs-xl); color: var(--color-copper-700); margin-bottom: var(--space-4); }
 .royal .ry p { color: var(--color-ink-700); line-height: 1.8; }
 .sub2-img {
     flex: 2;
@@ -242,7 +245,8 @@ header .welcome .w-btn {
 
 @media (max-width: 780px) {
     header { height: 70vh; min-height: 420px; margin-top: 64px; }
-    header .welcome h1 { font-size: var(--fs-xl); }
+    header .welcome h1,
+    header .welcome h2 { font-size: var(--fs-xl); }
     .submenu-cont { grid-template-columns: 1fr; width: 85%; }
     .royal { flex-direction: column; text-align: center; gap: var(--space-5); }
     .sub2-img { width: 70%; aspect-ratio: 4 / 3; flex: none; }

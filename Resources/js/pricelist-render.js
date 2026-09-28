@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   var mount = document.getElementById('priceListMount');
-  if (!mount) return;
+  var featuredPrices = document.querySelectorAll('[data-price-item]');
+  if (!mount && featuredPrices.length === 0) return;
+
+  function normalize(value) {
+    return String(value || '').trim().toLowerCase();
+  }
 
   function formatNaira(amount) {
     var n = Number(amount) || 0;
@@ -8,8 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function render(priceList) {
-    mount.innerHTML = '';
+    if (mount) mount.innerHTML = '';
     priceList.categories.forEach(function (category) {
+      if (!mount) return;
       var card = document.createElement('div');
       card.className = 'menu';
 
@@ -37,6 +43,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       card.appendChild(list);
       mount.appendChild(card);
+    });
+
+    featuredPrices.forEach(function (badge) {
+      var categoryName = normalize(badge.getAttribute('data-price-category'));
+      var itemName = normalize(badge.getAttribute('data-price-item'));
+      var category = priceList.categories.find(function (entry) {
+        return normalize(entry.name) === categoryName;
+      });
+      var item = category && category.items.find(function (entry) {
+        return normalize(entry.name) === itemName;
+      });
+
+      badge.hidden = !item;
+      badge.textContent = item ? formatNaira(item.price) : '';
     });
   }
 
