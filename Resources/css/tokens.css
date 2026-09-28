@@ -1,0 +1,90 @@
+/* Design tokens — Blossom P Restaurant
+   Brand colors sourced from Resources/logo/logo1.jpg (gold/amber fork+bowl, copper steam wisp).
+   Load this file first, before any other stylesheet. */
+
+/* Self-hosted Poppins (body/UI text) — previously only imported on the home page,
+   so every other page silently fell back to a system font. Importing it once here
+   fixes that for the whole site. */
+@import url('../../css2');
+/* Fraunces (headlines) — a warm, characterful serif for a restaurant brand,
+   paired with Poppins for body/UI text. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+
+:root {
+  /* Brand core */
+  --color-gold-300: #F3CE7C;
+  --color-gold-500: #E3A93C;
+  --color-gold-600: #C98F2A;
+  --color-gold-700: #A5741F;
+
+  --color-copper-400: #D98A4E;
+  --color-copper-500: #B5591F;
+  --color-copper-600: #954A19;
+  --color-copper-700: #7A3B14;
+
+  /* Light neutrals */
+  --color-bg: #FCF9F4;
+  --color-bg-alt: #F5EEE2;
+  --color-surface: #FFFFFF;
+  --color-border: #E7DCC8;
+
+  /* Text */
+  --color-ink-900: #2B2118;
+  --color-ink-700: #5C5044;
+  --color-ink-500: #8B8072;
+  --color-ink-inverse: #FBF6EC;
+
+  /* Dark surface — footer & mobile sidebar only */
+  --color-dark: #211A13;
+
+  /* State */
+  --color-success: #3F8F5F;
+  --color-error: #C1443A;
+  --color-focus: var(--color-copper-600);
+
+  /* Type */
+  --font-body: 'poppins', sans-serif;
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --fs-2xl: clamp(1.875rem, 1.4rem + 2.5vw, 2.75rem);
+  --fs-3xl: clamp(2.25rem, 1.6rem + 3.5vw, 3.5rem);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-card: 0 4px 16px -8px rgba(43, 33, 24, .15);
+  --shadow-lift: 0 8px 20px -8px rgba(43, 33, 24, .35);
+
+  /* Motion */
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --duration-fast: 180ms;
+  --duration-base: 280ms;
+
+  /* Subtle grain texture, used at low opacity on dark surfaces to avoid a flat/AI look */
+  --texture-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

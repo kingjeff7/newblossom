@@ -1,0 +1,70 @@
+/* Price List page — page-specific styles only.
+   Shared header/nav/sidebar/footer/buttons live in Resources/css/shared.css */
+
+header { width: 100%; height: 96px; position: relative; background: var(--color-surface); }
+
+.title {
+    width: min(90%, 700px);
+    margin: var(--space-9) auto 0;
+    text-align: center;
+}
+.title h1 { font-size: var(--fs-2xl); margin-bottom: var(--space-4); }
+.title h5 { font-weight: var(--fw-regular); color: var(--color-ink-700); line-height: 1.7; }
+
+.menu-cont {
+    width: min(92%, 1100px);
+    margin: var(--space-8) auto var(--space-9);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--duration-base) var(--ease-spring), box-shadow var(--duration-base) ease;
+}
+.menu:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+}
+.start {
+    display: block;
+    width: 100%;
+    padding: var(--space-4);
+    background: var(--color-gold-500);
+    color: var(--color-ink-900);
+    font-weight: var(--fw-semibold);
+    text-align: center;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-size: var(--fs-sm);
+}
+.menu ul { list-style: none; width: 100%; }
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--space-3) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color .15s ease, padding-left .15s ease;
+}
+.price-row:hover { background: var(--color-bg-alt); padding-left: calc(var(--space-5) + 4px); }
+.menu ul li:last-child { border-bottom: none; }
+.price-row__name { color: var(--color-ink-900); font-size: var(--fs-sm); }
+.price-row__price { color: var(--color-copper-700); font-weight: var(--fw-semibold); font-size: var(--fs-sm); white-space: nowrap; }
+.menu ul li:nth-child(even) { background: var(--color-bg-alt); }
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    .menu-cont { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 780px) {
+    header { height: 64px; margin-top: 64px; }
+    .title { margin-top: var(--space-6); }
+    .menu-cont { grid-template-columns: 1fr; width: 90%; }
+}

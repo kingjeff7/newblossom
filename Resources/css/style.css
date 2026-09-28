@@ -1,0 +1,251 @@
+/* Home page — page-specific styles only.
+   Shared header/nav/sidebar/footer/buttons live in Resources/css/shared.css */
+
+/* ---- HEADER: transparent over the hero photo, solidifies once you scroll ---- */
+body:not(.scrolled) nav {
+    background: transparent;
+    box-shadow: none;
+}
+body:not(.scrolled) nav .navlink a {
+    color: var(--color-ink-inverse);
+}
+body:not(.scrolled) nav .navlink a:hover,
+body:not(.scrolled) nav .navlink a.active:not(:last-child) {
+    color: var(--color-ink-inverse);
+    background: rgba(251, 246, 236, .16);
+}
+body:not(.scrolled) .nav-brand-text {
+    color: var(--color-ink-inverse);
+}
+
+/* ---- HERO ---- */
+header {
+    width: 100%;
+    height: min(78vh, 680px);
+    min-height: 480px;
+    overflow: hidden;
+    position: relative;
+}
+.swiper, .swiper-slide { width: 100%; height: 100%; }
+.swiper-slide { position: relative; overflow: hidden; }
+
+.hero-media { position: absolute; inset: 0; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(33,26,19,.4) 0%, rgba(33,26,19,.08) 16%, rgba(33,26,19,.2) 45%, rgba(33,26,19,.72) 100%);
+}
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--texture-grain);
+    opacity: .05;
+    mix-blend-mode: overlay;
+}
+
+header .welcome {
+    width: min(90%, 560px);
+    position: absolute;
+    left: 6%;
+    bottom: 9%;
+    z-index: 5;
+}
+header .welcome h1 {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-3);
+    color: var(--color-ink-inverse);
+}
+header .welcome p {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+    margin-bottom: var(--space-5);
+    color: var(--color-ink-inverse);
+    opacity: .92;
+}
+header .welcome .w-btn {
+    display: flex;
+    gap: var(--space-3);
+}
+
+/* ---- SPECIAL DISHES ---- */
+.special {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* the section rides up over the hero's bottom edge as a rounded sheet — the extra
+       padding-top absorbs the shift so the heading itself never sits on the photo */
+    margin-top: -32px;
+    padding: calc(var(--space-7) + 32px) 0 var(--space-7);
+    background: var(--color-bg);
+    border-radius: 28px 28px 0 0;
+    position: relative;
+    z-index: 6;
+    box-shadow: 0 -16px 32px -20px rgba(43, 33, 24, .25);
+}
+.special .section-sub1 {
+    width: min(90%, 640px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--space-7);
+}
+.section-sub1 h1 { font-size: var(--fs-xl); margin-bottom: var(--space-3); }
+.section-sub1 p { color: var(--color-ink-700); font-size: var(--fs-base); }
+
+.submenu-cont {
+    width: min(90%, 1100px);
+    margin: 0 auto var(--space-8);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+.subm { display: contents; }
+.subm .submenu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-lift);
+    transition: transform var(--duration-base) var(--ease-spring), box-shadow var(--duration-base) ease;
+}
+.subm .submenu:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 32px -12px rgba(43, 33, 24, .3);
+}
+.subm .submenu .price-badge {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    background: var(--color-gold-500);
+    color: var(--color-ink-900);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-xs);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+}
+.subm .submenu p { margin: var(--space-4) 0 var(--space-3); font-weight: var(--fw-medium); color: var(--color-ink-900); }
+.subm .submenu .btn { width: 100%; }
+
+/* ---- WELCOME / ABOUT STRIP ---- */
+.submenu-cont2 { width: 100%; background: var(--color-bg-alt); padding: var(--space-8) 0; }
+.submenu-cont2 .royal {
+    display: flex;
+    width: min(90%, 1100px);
+    margin: 0 auto var(--space-8);
+    align-items: center;
+    gap: var(--space-8);
+}
+.royal .ry { flex: 3; }
+.royal .ry h1 { font-size: var(--fs-xl); color: var(--color-copper-700); margin-bottom: var(--space-4); }
+.royal .ry p { color: var(--color-ink-700); line-height: 1.8; }
+.sub2-img {
+    flex: 2;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lift);
+    aspect-ratio: 4 / 5;
+}
+.sub2-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- FOOD CATEGORY SWIPER ---- */
+.food-swiper {
+    width: min(90%, 1100px);
+    height: 340px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.food-swiper .swiper-wrapper { display: flex; width: 100%; height: 100%; }
+.food-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 340px;
+    height: 100%;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--duration-base) var(--ease-spring), box-shadow var(--duration-base) ease;
+}
+.food-swiper .swiper-slide:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+}
+.food-swiper .swiper-slide img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    order: -1;
+}
+.food-swiper .swiper-slide h3 {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-gold-500);
+    transition: background-color .2s ease;
+}
+.food-swiper .swiper-slide h3 a {
+    text-decoration: none;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: var(--color-ink-900);
+    letter-spacing: .04em;
+}
+.food-swiper .swiper-slide h3:hover { background: var(--color-gold-600); }
+
+.swiper-button-next2,
+.swiper-button-prev2 {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    color: var(--color-ink-900);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.swiper-button-next2 { right: -10px; }
+.swiper-button-prev2 { left: -10px; }
+.swiper-button-next2::after { content: '\203A'; }
+.swiper-button-prev2::after { content: '\2039'; }
+
+.swiper-pagination2 { bottom: -30px; text-align: center; }
+.swiper-pagination-bullet { background: var(--color-copper-500); opacity: .4; }
+.swiper-pagination-bullet-active { opacity: 1; background: var(--color-gold-500); }
+
+/* ---- TABLET / MOBILE ---- */
+@media (min-width: 781px) and (max-width: 1024px) {
+    header { height: 60vh; }
+    .submenu-cont { grid-template-columns: repeat(2, 1fr); }
+    .royal { flex-direction: column; text-align: center; }
+    .sub2-img { width: 60%; flex: none; }
+}
+
+@media (max-width: 780px) {
+    header { height: 70vh; min-height: 420px; margin-top: 64px; }
+    header .welcome h1 { font-size: var(--fs-xl); }
+    .submenu-cont { grid-template-columns: 1fr; width: 85%; }
+    .royal { flex-direction: column; text-align: center; gap: var(--space-5); }
+    .sub2-img { width: 70%; aspect-ratio: 4 / 3; flex: none; }
+    .food-swiper { height: 300px; }
+    .food-swiper .swiper-slide { width: 260px; }
+}

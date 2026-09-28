@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — Blossom P Restaurant and Fast-Food</title>
+    <link rel="stylesheet" href="../Resources/css/tokens.css">
+    <link rel="stylesheet" href="../Resources/css/shared.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+    <script src="../ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../7542b063b0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="main-content">
+        <!-- SHARED HEADER — keep in sync with other 5 pages, see Resources/css/shared.css for shared styles -->
+        <a href="#main" class="skip-link">Skip to content</a>
+      <header>
+            <div class="sidebtn" id="sbtn"><i class="fa-solid fa-bars btnicon"></i></div>
+            <a href="../index.html" class="logo1">
+                <img src="../Resources/logo/logo1.jpg" alt="Blossom P logo">
+            </a>
+            <a href="../index.html" class="nav-brand-text">Blossom P</a>
+            <div class="long"></div>
+
+            <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar__brand">
+                    <img src="../Resources/logo/logo1.jpg" alt="Blossom P logo">
+                    <div>
+                        <p class="sidebar__brand-name">Blossom P</p>
+                        <p class="sidebar__brand-tag">Restaurant &amp; Fast-Food</p>
+                    </div>
+                </div>
+                <div class="sidebar__nav" role="navigation" aria-label="Mobile menu">
+                    <a href="../index.html" class="sidebar__link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    <a href="index.html" class="sidebar__link active"><i class="fa-solid fa-utensils"></i><span>Menu</span></a>
+                    <a href="../Pages/pricelist/index.html" class="sidebar__link"><i class="fa-solid fa-tag"></i><span>Price-list</span></a>
+                    <a href="../Pages/About/index.html" class="sidebar__link"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+                    <a href="../Pages/location/index.html" class="sidebar__link"><i class="fa-solid fa-location-dot"></i><span>Contact Us</span></a>
+                    <a href="../faq/index.html" class="sidebar__link"><i class="fa-solid fa-circle-question"></i><span>Faq</span></a>
+                </div>
+                <div class="sidebar__footer">
+                    <a href="../Pages/location/index.html" class="btn btn-primary sidebar__cta">Order Online</a>
+                    <span class="sidebar__footer-label">Follow Us</span>
+                    <div class="side-socials">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a>
+                        <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp icon"></i></a>
+                    </div>
+                </div>
+            </div>
+
+           <nav>
+            <div class="navlink">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">Menu</a>
+                <a href="../Pages/About/index.html">About</a>
+                <a href="../Pages/pricelist/index.html">Price-list</a>
+                <a href="../faq/index.html">Faq</a>
+                <a href="../Pages/location/index.html">Location</a>
+            </div>
+        </nav>
+
+        <div class="order">
+            <a href="../Pages/location/index.html">Order Online</a>
+        </div>
+
+      </header>
+      <!-- END SHARED HEADER -->
+
+      <div class="main" id="main" tabindex="-1">
+          <div class="meal">
+              <h1>There's a meal for everyone</h1>
+              <p>Satisfy your cravings from our variety of mouthwatering delicacies</p>
+              <hr>
+          </div>
+
+          <div class="menu" id="menu">
+              <p><a href="#" class="category active" data-category="African">African</a></p>
+              <p><a href="#" class="category" data-category="FastFood">FastFood</a></p>
+              <p><a href="#" class="category" data-category="Bakery">Bakery</a></p>
+              <p><a href="#" class="category" data-category="Icecream">IceCream</a></p>
+              <p><a href="#" class="category" data-category="Breakfast">Breakfast</a></p>
+              <p class="af">Experience the rich and vibrant taste of delicious African delicacies</p>
+          </div>
+
+          <!-- African food section -->
+          <div class="food active" id="African">
+              <div class="box">
+                  <h5>Egusi Soup and Assorted Meat</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/egusi-img.jpg" alt="Egusi Soup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Okra Soup and Assorted Meat</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/assorted1-img.jpg" alt="Okra Soup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Jollof rice and turkey</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/jollof-turkey-img.jpg" alt="Jollof rice and turkey"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Okro soup</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/okra1-img.jpg" alt="Okro soup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Peppersoup</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/ppsoup2-img.jpg" alt="Peppersoup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Peppersoup</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/ppsoupp1-img.jpg" alt="Peppersoup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Okro soup</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/okra2-img.jpg" alt="Okro soup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Okro soup</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/africana/okra4-img.jpg" alt="Okro soup"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+          </div>
+
+          <!-- Fast Food section -->
+          <div class="food" id="FastFood">
+              <div class="box">
+                  <h5>Garden Egg Stew</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/eggsauce-img.jpg" alt="Garden Egg Stew"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Fried rice and chicken</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/friedrice-chicken-img.jpg" alt="Fried rice and chicken"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Sauce and turkey</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/sauce-and-turkey-img.jpg" alt="Sauce and turkey"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Jollof rice and turkey</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/jolof-turkey3-img.jpg" alt="Jollof rice and turkey"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Fried Rice</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/friedrice-img.jpg" alt="Fried Rice"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Jollof rice and turkey</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/joloff-turkey2-img.jpg" alt="Jollof rice and turkey"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Spaghetti</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/spagg2-img.jpg" alt="Spaghetti"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Spaghetti</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/fastfood/spag-img.jpg" alt="Spaghetti"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+          </div>
+
+          <!-- Bakery section -->
+          <div class="food" id="Bakery">
+              <div class="box">
+                  <h5>Cake</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/cake-3500-img.jpg" alt="Cake"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Cup cake</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/cupcakeimg.jpg" alt="Cup cake"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Fish pie</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/fishpie-img.jpg" alt="Fish pie"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Meat pie</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/meatpie-img.jpg" alt="Meat pie"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Shawarma</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/sharwamar-img.jpg" alt="Shawarma"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Shawarma</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/shawarma-outdoor3-img.jpg" alt="Shawarma"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Cake</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/cake3-3500-img.jpg" alt="Cake"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Cake</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/cake2-3500-img.jpg" alt="Cake"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+          </div>
+
+          <!-- Ice Cream section -->
+          <div class="food" id="Icecream">
+              <div class="coming-soon">
+                  <h3>Ice cream flavors coming soon!</h3>
+                  <p>We're putting together photos of our ice cream and cold drinks menu. In the meantime, ask our team about today's flavors when you place an order.</p>
+                  <a href="../Pages/location/index.html" class="btn btn-primary">Ask about flavors</a>
+              </div>
+          </div>
+
+          <!-- Breakfast section -->
+          <div class="food" id="Breakfast">
+              <div class="box">
+                  <h5>Spaghetti</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/spagg2-img.jpg" alt="Spaghetti"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Special Rice</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/specialrice1-img.jpg" alt="Special Rice"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Spaghetti</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/spag-img.jpg" alt="Spaghetti"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Fried rice and Jollof rice</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/friedriceandjollof-img.jpg" alt="Fried rice and Jollof rice"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Egg sauce</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/eggsauce-img.jpg" alt="Egg sauce"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Shawarma</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/bakery/sharwamar-img.jpg" alt="Shawarma"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Spaghetti</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/spag-img.jpg" alt="Spaghetti"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+              <div class="box">
+                  <h5>Special Rice</h5>
+                  <div class="dish-card__media"><img src="../Resources/css/img/breakfast/specialrice1-img.jpg" alt="Special Rice"></div>
+                  <p><a href="../Pages/location/index.html">Order Now</a></p>
+              </div>
+          </div>
+      </div>
+
+        <div class="order-section">
+            <h3 class="order-title">How to Place an Order</h3>
+            <img src="../Resources/css/img/idea%20emoji.png" alt="Idea Emoji" class="order-image">
+            <p class="order-description">
+                At Blossom P Restaurant and Fast-Food, we've made the process of ordering our premium delicacy and snack simple and convenient. Here's how you can easily place your order:
+            </p>
+
+            <ol class="order-steps">
+                <li>
+                    <h2>Browse Our Product</h2>
+                    <p class="order-step">Explore our range of high-quality dishes and snack. Take your time to check out the details and images of each unique delicacies.</p>
+                </li>
+                <li>
+                    <h2>Click "Order Now"</h2>
+                    <p class="order-step">Once you've found what you need, click the "Order Now" button to go to a page which requires your name, email and phone number, after that click 'SEND TO WHATSAPP'. This will redirect you to our official WhatsApp business account, where you can directly chat with our team. Although the details are optional.</p>
+                </li>
+                <li>
+                    <h2>Confirm Your Order Via WhatsApp</h2>
+                    <p class="order-step">Send us a message on WhatsApp with the product details and quantities you wish to order. Our team will respond promptly to confirm availability and finalize the order.</p>
+                </li>
+                <li>
+                    <h2>Payment and Delivery</h2>
+                    <p class="order-step">After confirming your order, we'll provide payment instructions and delivery options. You can then choose the most convenient payment method and arrange for delivery or pickup.</p>
+                </li>
+                <li>
+                    <h2>Receive Your Order</h2>
+                    <p class="order-step">Once payment is completed, we'll ensure your order is processed and delivered to your location swiftly. Enjoy our amazing delicacies, straight to your doorstep!</p>
+                </li>
+            </ol>
+
+            <p class="order-extra-info">
+                Need More Information? Have questions about our products, or need more tips before placing your order? Message us on WhatsApp using the "Order Now" button above, and our team will be happy to help.
+            </p>
+        </div>
+
+        <!-- SHARED FOOTER — keep in sync with other 5 pages, see Resources/css/shared.css for shared styles -->
+        <div class="footer-cont">
+            <div class="items">
+                <img src="../Resources/logo/logo1.jpg" alt="Blossom P logo">
+                <p>Blossom P Restaurant and Fast-Food is a vibrant dining destination
+                     located in the heart of Benin City, Nigeria. Known for its warm hospitality and delicious offerings, the restaurant specializes in a wide range of local and international cuisines,
+                    including freshly prepared delicacies, snacks, and premium fast-food options.</p>
+               <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Obagie Ogheghe Rd, Benin City 300001, Edo</p>
+               <h3>Opening Hours</h3>
+               <p>Monday - Sunday</p>
+               <p>8:30am to 10:00pm</p>
+            </div>
+            <div class="items">
+                <h3>Navigation</h3>
+                <a href="../index.html">Home</a>
+                <a href="index.html">Menu</a>
+                <a href="../Pages/About/index.html">About</a>
+                <a href="../Pages/pricelist/index.html">Price-list</a>
+                <a href="../faq/index.html">Faq</a>
+                <a href="../Pages/location/index.html">Location</a>
+            </div>
+            <div class="items">
+                <h3>Dishes</h3>
+                    <a href="#African">Blossom p's Special</a>
+                    <a href="#African">OKro and Assorted</a>
+                    <a href="#Bakery">Garden-Egg and Yam</a>
+                    <a href="#Breakfast">Yam-Porridge</a>
+            </div>
+            <div class="items">
+                <h3>Follow Us</h3>
+                <div class="icon">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f i"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram i"></i></a>
+                <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp i"></i></a>
+            </div>
+            </div>
+     </div>
+        <footer>
+            <div class="boxx">
+           <p class="copy">&copy; 2024 Blossom P Restaurant and Fast-Food. All rights reserved.</p>
+           <div class="terms">
+            <a href="#">Terms Of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+     </div>
+        </footer>
+        <!-- END SHARED FOOTER -->
+        </div>
+
+
+</body>
+
+<script src="../Resources/js/nav.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.category').click(function(e) {
+          e.preventDefault();
+
+          $('.food').removeClass('active').css('opacity', 0).hide();
+          $('.menu p a').removeClass('active');
+          $(this).addClass('active');
+
+          var category = $(this).data('category');
+          var $selectedSection = $('#' + category);
+
+          $selectedSection.show().animate({ opacity: 1 }, 100).addClass('active');
+      });
+  });
+</script>
+</html>

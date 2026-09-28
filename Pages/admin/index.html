@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Price Admin — Blossom P</title>
+    <link rel="stylesheet" href="../../Resources/css/tokens.css">
+    <link rel="stylesheet" href="../../Resources/css/shared.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon_io/site.webmanifest">
+
+    <script src="../../7542b063b0.js" crossorigin="anonymous"></script>
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+    <div class="admin-topbar">
+        <a href="../../index.html" class="admin-brand">
+            <img src="../../Resources/logo/logo1.jpg" alt="Blossom P logo">
+            <span>Blossom P — Price Admin</span>
+        </a>
+        <button type="button" id="signOutBtn" class="btn btn-secondary-light" hidden>Sign Out</button>
+    </div>
+
+    <div id="configWarning" class="admin-banner admin-banner--warn" hidden>
+        Supabase isn't connected yet, so changes here can't be saved live. Follow the setup steps you were given to connect your Supabase project, then this page will work.
+    </div>
+
+    <!-- LOGIN -->
+    <section id="loginSection" class="admin-card admin-login" hidden>
+        <h1>Sign in</h1>
+        <p class="admin-hint">Sign in with the admin account to edit prices.</p>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            <p id="loginError" class="admin-error" role="alert"></p>
+            <button type="submit" class="btn btn-primary admin-full-btn">Sign In</button>
+        </form>
+    </section>
+
+    <!-- EDITOR -->
+    <section id="editorSection" class="admin-editor" hidden>
+        <div class="admin-editor__head">
+            <div>
+                <h1>Edit Prices</h1>
+                <p class="admin-hint">Changes go live for every visitor as soon as you save.</p>
+            </div>
+            <button type="button" id="addCategoryBtn" class="btn btn-secondary-dark">+ Add Category</button>
+        </div>
+
+        <div id="categoriesMount"></div>
+
+        <div class="admin-save-bar">
+            <p id="saveStatus" class="admin-save-status" role="status"></p>
+            <button type="button" id="saveBtn" class="btn btn-primary admin-save-btn">Save Changes</button>
+        </div>
+    </section>
+</div>
+
+<template id="categoryTemplate">
+    <div class="admin-category">
+        <div class="admin-category__head">
+            <input type="text" class="admin-category__name" placeholder="Category name">
+            <button type="button" class="admin-icon-btn remove-category-btn" aria-label="Remove category"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <div class="admin-items"></div>
+        <button type="button" class="btn btn-secondary-dark admin-add-item-btn">+ Add Item</button>
+    </div>
+</template>
+
+<template id="itemTemplate">
+    <div class="admin-item">
+        <input type="text" class="admin-item__name" placeholder="Item name">
+        <input type="number" class="admin-item__price" placeholder="Price" min="0" step="50">
+        <button type="button" class="admin-icon-btn remove-item-btn" aria-label="Remove item"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="../../Resources/js/supabase-config.js"></script>
+<script src="../../Resources/js/price-data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

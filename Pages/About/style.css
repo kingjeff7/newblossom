@@ -1,0 +1,41 @@
+/* About page — page-specific styles only.
+   Shared header/nav/sidebar/footer/buttons live in Resources/css/shared.css */
+
+header { width: 100%; height: 96px; position: relative; background: var(--color-surface); }
+
+.main {
+    width: min(90%, 900px);
+    margin: 0 auto;
+    padding-top: var(--space-9);
+}
+
+.hero-banner { margin-bottom: var(--space-8); }
+.hero-banner .dish-card__media { aspect-ratio: 21 / 9; }
+.hero-banner .dish-card__media img { transition: transform 1.2s ease; }
+.hero-banner:hover .dish-card__media img { transform: scale(1.04); }
+
+.sub {
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+.main .sub:last-child { border-bottom: none; }
+
+.sub h3 {
+    color: var(--color-copper-700);
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-4);
+}
+.sub p {
+    color: var(--color-ink-700);
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+}
+.sub p:last-child { margin-bottom: 0; }
+.sub ul { margin: var(--space-2) 0 var(--space-4) var(--space-5); }
+.sub ul li { color: var(--color-ink-700); line-height: 1.8; margin-bottom: var(--space-2); }
+
+@media (max-width: 780px) {
+    header { height: 64px; margin-top: 64px; }
+    .main { padding-top: var(--space-6); }
+}

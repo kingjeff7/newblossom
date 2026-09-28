@@ -1,0 +1,72 @@
+/* Contact/Location page — page-specific styles only.
+   Shared header/nav/sidebar/footer/buttons live in Resources/css/shared.css */
+
+header { width: 100%; height: 96px; position: relative; background: var(--color-surface); }
+
+.location-intro {
+    width: min(90%, 1000px);
+    margin: var(--space-9) auto 0;
+    text-align: center;
+}
+.location-intro h1 { font-size: var(--fs-2xl); margin-bottom: var(--space-3); }
+.location-address {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-ink-700);
+    font-size: var(--fs-base);
+}
+.location-address i { color: var(--color-copper-700); }
+
+.map-wrap {
+    width: min(90%, 1000px);
+    margin: var(--space-6) auto 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    line-height: 0;
+}
+
+.cont { padding: var(--space-8) 0 var(--space-9); background: var(--color-bg); }
+
+.main {
+    width: min(90%, 480px);
+    margin: 0 auto;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.main h3 { text-align: center; font-size: var(--fs-lg); margin-bottom: var(--space-2); }
+.form-hint { text-align: center; color: var(--color-ink-700); font-size: var(--fs-xs); margin-bottom: var(--space-4); }
+
+.main label { font-size: var(--fs-xs); font-weight: var(--fw-medium); color: var(--color-ink-700); margin-top: var(--space-2); }
+.main input {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-sm);
+    background: var(--color-bg);
+    color: var(--color-ink-900);
+}
+.main input:focus { outline: none; border-color: var(--color-gold-500); }
+.main input.has-error { border-color: var(--color-error); }
+
+.field-error {
+    display: block;
+    min-height: 1em;
+    color: var(--color-error);
+    font-size: var(--fs-xs);
+    margin-top: -4px;
+}
+
+.main .btn { margin-top: var(--space-4); width: 100%; }
+
+@media (max-width: 780px) {
+    header { height: 64px; margin-top: 64px; }
+    .location-intro { margin-top: var(--space-6); }
+}

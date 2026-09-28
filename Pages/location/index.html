@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Blossom P Restaurant and Fast-Food</title>
+    <link rel="stylesheet" href="../../Resources/css/tokens.css">
+    <link rel="stylesheet" href="../../Resources/css/shared.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon_io/site.webmanifest">
+
+    <script src="../../ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../../7542b063b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="main-content">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <!-- SHARED HEADER — keep in sync with other 5 pages, see Resources/css/shared.css for shared styles -->
+     <header>
+        <div class="sidebtn" id="sbtn"><i class="fa-solid fa-bars btnicon"></i></div>
+        <a href="../../index.html" class="logo1">
+            <img src="../../Resources/logo/logo1.jpg" alt="Blossom P logo">
+        </a>
+        <a href="../../index.html" class="nav-brand-text">Blossom P</a>
+        <div class="long"></div>
+
+            <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar__brand">
+                    <img src="../../Resources/logo/logo1.jpg" alt="Blossom P logo">
+                    <div>
+                        <p class="sidebar__brand-name">Blossom P</p>
+                        <p class="sidebar__brand-tag">Restaurant &amp; Fast-Food</p>
+                    </div>
+                </div>
+                <div class="sidebar__nav" role="navigation" aria-label="Mobile menu">
+                    <a href="../../index.html" class="sidebar__link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    <a href="../../menu2/index.html" class="sidebar__link"><i class="fa-solid fa-utensils"></i><span>Menu</span></a>
+                    <a href="../pricelist/index.html" class="sidebar__link"><i class="fa-solid fa-tag"></i><span>Price-list</span></a>
+                    <a href="../About/index.html" class="sidebar__link"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+                    <a href="index.html" class="sidebar__link active"><i class="fa-solid fa-location-dot"></i><span>Contact Us</span></a>
+                    <a href="../../faq/index.html" class="sidebar__link"><i class="fa-solid fa-circle-question"></i><span>Faq</span></a>
+                </div>
+                <div class="sidebar__footer">
+                    <a href="index.html" class="btn btn-primary sidebar__cta">Order Online</a>
+                    <span class="sidebar__footer-label">Follow Us</span>
+                    <div class="side-socials">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a>
+                        <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp icon"></i></a>
+                    </div>
+                </div>
+            </div>
+
+           <nav>
+            <div class="navlink">
+                <a href="../../index.html">Home</a>
+                <a href="../../menu2/index.html">Menu</a>
+                <a href="../About/index.html">About</a>
+                <a href="../pricelist/index.html">Price-list</a>
+                <a href="../../faq/index.html">Faq</a>
+                <a href="index.html" class="active">Location</a>
+            </div>
+        </nav>
+
+        <div class="order">
+            <a href="index.html">Order Online</a>
+        </div>
+
+      </header>
+      <!-- END SHARED HEADER -->
+
+      <div class="location-intro" id="main-content" tabindex="-1">
+          <h1>Find Us</h1>
+          <p class="location-address"><i class="fa-solid fa-location-dot"></i> Obagie Ogheghe Rd, Benin City 300001, Edo</p>
+      </div>
+
+      <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.7166546102744!2d5.6119772!3d6.2003545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1046d5af2baf6c03%3A0x78f19be35badbef8!2sBlossom%20P%20Fast%20Food%20%26%20Restaurant!5e0!3m2!1sen!2sng!4v1728928762367!5m2!1sen!2sng" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Blossom P Restaurant location">
+        </iframe>
+      </div>
+
+<div class="cont" id="cont">
+    <form class="main" id="order-form">
+      <h3>Order Now</h3>
+      <p class="form-hint">Fill in your details and we'll open WhatsApp with your order request ready to send.</p>
+
+      <label for="name">Your Name</label>
+      <input type="text" placeholder="Your Name" id="name" name="name" required>
+      <span class="field-error" id="name-error"></span>
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" id="email" name="email">
+      <span class="field-error" id="email-error"></span>
+
+      <label for="tel">Telephone</label>
+      <input type="tel" placeholder="Telephone" id="tel" name="tel" required>
+      <span class="field-error" id="tel-error"></span>
+
+      <button type="button" id="sendbtn" class="btn btn-primary">Send to WhatsApp</button>
+    </form>
+</div>
+
+        <!-- SHARED FOOTER — keep in sync with other 5 pages, see Resources/css/shared.css for shared styles -->
+        <div class="footer-cont">
+            <div class="items">
+                <img src="../../Resources/logo/logo1.jpg" alt="Blossom P logo">
+                <p>Blossom P Restaurant and Fast-Food is a vibrant dining
+                    destination located in the heart of Benin City, Nigeria. Known for its warm hospitality and delicious offerings, the restaurant specializes in a wide range of local and international cuisines,
+                     including freshly prepared delicacies, snacks, and premium fast-food options.</p>
+               <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Obagie Ogheghe Rd, Benin City 300001, Edo</p>
+               <h3>Opening Hours</h3>
+               <p>Monday - Sunday</p>
+               <p>9:00am to 10:00pm</p>
+            </div>
+            <div class="items">
+                <h3>Navigation</h3>
+                <a href="../../index.html">Home</a>
+                <a href="../../menu2/index.html">Menu</a>
+                <a href="../About/index.html">About</a>
+                <a href="../pricelist/index.html">Price-list</a>
+                <a href="../../faq/index.html">Faq</a>
+                <a href="index.html">Location</a>
+            </div>
+            <div class="items">
+                <h3>Dishes</h3>
+                <a href="../../menu2/index.html#Breakfast">Blossom p's Special</a>
+                <a href="../../menu2/index.html#African">OKro and Assorted</a>
+                <a href="../../menu2/index.html#African">Garden-Egg and Yam</a>
+                <a href="../../menu2/index.html#African">Yam-Porridge</a>
+            </div>
+            <div class="items">
+                <h3>Follow Us</h3>
+                <div class="icon">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f i"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram i"></i></a>
+                    <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp i"></i></a>
+            </div>
+            </div>
+     </div>
+
+        <footer>
+            <div class="boxx">
+           <p class="copy">&copy; 2024 Blossom P Restaurant and Fast-Food. All rights reserved.</p>
+           <div class="terms">
+            <a href="#">Terms Of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+        </footer>
+        <!-- END SHARED FOOTER -->
+
+</div>
+</body>
+
+<script src="../../Resources/js/nav.js"></script>
+<script>
+$(document).ready(function() {
+  function showError(fieldId, message) {
+    $('#' + fieldId).addClass('has-error');
+    $('#' + fieldId + '-error').text(message);
+  }
+  function clearError(fieldId) {
+    $('#' + fieldId).removeClass('has-error');
+    $('#' + fieldId + '-error').text('');
+  }
+
+  $('#order-form input').on('input', function () {
+    clearError(this.id);
+  });
+
+  $('#sendbtn').click(function(event){
+    event.preventDefault();
+
+    var name = $('#name').val().trim();
+    var email = $('#email').val().trim();
+    var tel = $('#tel').val().trim();
+    var isValid = true;
+
+    clearError('name');
+    clearError('email');
+    clearError('tel');
+
+    if (!name) {
+      showError('name', 'Please enter your name.');
+      isValid = false;
+    }
+    if (!tel) {
+      showError('tel', 'Please enter a phone number.');
+      isValid = false;
+    }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('email', 'Please enter a valid email address, or leave it blank.');
+      isValid = false;
+    }
+    if (!isValid) {
+      return;
+    }
+
+    var $btn = $(this);
+    $btn.prop('disabled', true).text('Opening WhatsApp…');
+
+    var formattedMessage = 'Hello, my name is ' + name + '.\nEmail: ' + (email || 'Not provided') + '\nTelephone: ' + tel;
+    var phoneNumber = '2349138878562';
+    var whatsappUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(formattedMessage);
+
+    window.open(whatsappUrl, '_blank');
+
+    setTimeout(function () {
+      $btn.prop('disabled', false).text('Send to WhatsApp');
+    }, 1500);
+  });
+});
+</script>
+</html>

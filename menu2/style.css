@@ -1,0 +1,123 @@
+/* Menu page — page-specific styles only.
+   Shared header/nav/sidebar/footer/buttons live in Resources/css/shared.css */
+
+header { width: 100%; height: 96px; position: relative; background: var(--color-surface); }
+
+.main { padding-top: var(--space-9); padding-bottom: var(--space-8); background: var(--color-bg); }
+
+.meal { text-align: center; margin-bottom: var(--space-7); }
+.meal h1 { font-size: var(--fs-2xl); margin-bottom: var(--space-3); }
+.meal p { color: var(--color-ink-700); font-size: var(--fs-base); }
+.meal hr { width: 60px; height: 3px; background: var(--color-gold-500); margin: var(--space-5) auto 0; }
+
+.menu {
+    width: min(92%, 900px);
+    margin: 0 auto var(--space-7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+}
+.menu p a {
+    text-decoration: none;
+    color: var(--color-ink-900);
+    font-weight: var(--fw-medium);
+    padding: var(--space-3) var(--space-5);
+    display: block;
+    border-radius: var(--radius-pill);
+    background: var(--color-bg-alt);
+    transition: background-color .2s ease, color .2s ease;
+}
+.menu p a.active { background: var(--color-gold-500); color: var(--color-ink-900); }
+.af {
+    width: 100%;
+    text-align: center;
+    color: var(--color-ink-700);
+    margin-top: var(--space-4);
+}
+
+.food {
+    width: min(92%, 1200px);
+    display: none;
+    gap: var(--space-6);
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.food.active { display: grid !important; opacity: 1; }
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform var(--duration-base) var(--ease-spring), box-shadow var(--duration-base) ease;
+}
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+}
+.box .dish-card__media img {
+    transition: transform var(--duration-base) ease;
+}
+.box:hover .dish-card__media img {
+    transform: scale(1.05);
+}
+.box h5 {
+    padding: var(--space-3) var(--space-4) 0;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--color-ink-900);
+}
+.box p { padding: 0 var(--space-4) var(--space-4); margin-top: auto; }
+.box p a {
+    display: inline-block;
+    color: var(--color-copper-700);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-xs);
+    text-decoration: none;
+    margin-top: var(--space-2);
+}
+.box p a:hover { text-decoration: underline; }
+.box .dish-card__media { margin: var(--space-3) var(--space-4) var(--space-2); border-radius: var(--radius-sm); }
+
+.coming-soon {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-8) var(--space-6);
+    max-width: 560px;
+    margin: 0 auto;
+}
+.coming-soon h3 { font-size: var(--fs-lg); margin-bottom: var(--space-3); color: var(--color-copper-700); }
+.coming-soon p { color: var(--color-ink-700); margin-bottom: var(--space-5); line-height: 1.7; }
+
+/* ---- HOW TO ORDER ---- */
+.order-section {
+    position: relative;
+    width: min(90%, 900px);
+    margin: var(--space-9) auto;
+}
+.order-title { font-size: var(--fs-xl); margin-bottom: var(--space-4); }
+.order-image { position: absolute; top: -12px; left: -60px; width: 60px; height: 60px; }
+.order-description, .order-step { color: var(--color-ink-700); line-height: 1.7; margin-bottom: var(--space-3); }
+.order-steps { margin: var(--space-5) 0; padding-left: var(--space-5); }
+.order-steps li { margin-bottom: var(--space-5); }
+.order-steps h2 { font-size: var(--fs-md); color: var(--color-copper-700); margin-bottom: var(--space-2); }
+.order-extra-info { color: var(--color-ink-700); line-height: 1.7; }
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    .food { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 780px) {
+    header { height: 64px; margin-top: 64px; }
+    .main { padding-top: var(--space-6); }
+    .food { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+    .order-image { display: none; }
+}
