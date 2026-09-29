@@ -4,7 +4,7 @@
 var DEFAULT_PRICE_LIST = {
   categories: [
     {
-      name: 'Breakfast',
+      name: 'Continental',
       items: [
         { name: 'Jollof Rice', price: 1000 },
         { name: 'Fried Rice', price: 1000 },
