@@ -64,7 +64,7 @@
                     <span class="sidebar__footer-label">Follow Us</span>
                     <div class="side-socials">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a>
+                        <a href="https://www.instagram.com/blossom_p_fastfood?stkn=bjQwM3M0cDZuYmN6" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram icon"></i></a>
                         <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp icon"></i></a>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
       <div class="location-intro" id="main-content" tabindex="-1">
           <h1>Find Us</h1>
           <p class="location-address"><i class="fa-solid fa-location-dot"></i> Obagie Ogheghe Rd, Benin City 300001, Edo</p>
-          <p class="location-address"><i class="fa-solid fa-phone"></i> <a href="tel:+2347064724712">070 647 24712</a> | <a href="tel:+2348148314581">081 483 14581</a></p>
+          <p class="location-address"><i class="fa-solid fa-phone"></i> <a href="tel:+2347064724712">070 647 24712</a> | <a href="tel:+2348148314581">081 483 14581</a> | <a href="tel:+2349138878562">091 388 78562</a></p>
       </div>
 
       <div class="map-wrap">
@@ -130,6 +130,7 @@
                <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Obagie Ogheghe Rd, Benin City 300001, Edo</p>
                <p class="footer-phone"><i class="fa-solid fa-phone"></i> <a href="tel:+2347064724712">070 647 24712</a></p>
                <p class="footer-phone"><i class="fa-solid fa-phone"></i> <a href="tel:+2348148314581">081 483 14581</a></p>
+               <p class="footer-phone"><i class="fa-solid fa-phone"></i> <a href="tel:+2349138878562">091 388 78562</a></p>
                <h3>Opening Hours</h3>
                <p>Monday - Sunday</p>
                <p>9:00am to 10:00pm</p>
@@ -154,7 +155,7 @@
                 <h3>Follow Us</h3>
                 <div class="icon">
                     <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f i"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram i"></i></a>
+                    <a href="https://www.instagram.com/blossom_p_fastfood?stkn=bjQwM3M0cDZuYmN6" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram i"></i></a>
                     <a href="https://wa.me/2349138878562" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp i"></i></a>
             </div>
             </div>
@@ -162,7 +163,7 @@
 
         <footer>
             <div class="boxx">
-           <p class="copy">&copy; 2024 Blossom P Restaurant and Fast-Food. All rights reserved.</p>
+           <p class="copy">&copy; <span id="current-year"></span> Blossom P Restaurant and Fast-Food. All rights reserved.</p>
            <div class="terms">
             <a href="#">Terms Of Service</a>
             <a href="#">Privacy Policy</a>
@@ -232,5 +233,13 @@ $(document).ready(function() {
     }, 1500);
   });
 });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  });
 </script>
 </html>
