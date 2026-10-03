@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/menu", "destination": "/menu2/index.html", "permanent": true },
+    { "source": "/about", "destination": "/Pages/About/index.html", "permanent": true },
+    { "source": "/location", "destination": "/Pages/location/index.html", "permanent": true },
+    { "source": "/prices", "destination": "/Pages/pricelist/index.html", "permanent": true },
+    { "source": "/pricelist", "destination": "/Pages/pricelist/index.html", "permanent": true },
+    { "source": "/faq", "destination": "/faq/index.html", "permanent": true }
+  ]
+}
